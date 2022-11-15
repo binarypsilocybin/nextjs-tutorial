@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const CoinList = () => {
+const CoinList = ({ coindData }) => {
+  console.log(coindData);
   return <div></div>;
 };
 
