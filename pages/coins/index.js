@@ -1,20 +1,18 @@
-import axios from 'axios';
+import Axios from 'axios';
 
-const CoinList = ({ coindData }) => {
-  console.log(coindData);
+const CoinList = ({ coinData }) => {
+  console.log(coinData);
   return <div></div>;
 };
 
-getStaticProps;
 export const getStaticProps = async () => {
-  const data = await axios.get(
+  const data = await Axios.get(
     'https://api.coinstats.app/public/v1/coins?skip=0'
   );
   return {
     props: {
-      coindData: data.data,
+      coinData: data.data,
     },
   };
 };
 export default CoinList;
-n
