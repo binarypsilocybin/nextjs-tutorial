@@ -2,7 +2,19 @@ import Axios from 'axios';
 
 const CoinList = ({ coinData }) => {
   console.log(coinData);
-  return <div></div>;
+  return (
+    <div>
+      {coinData.coins.map((coin) => {
+        return (
+          <div>
+            <h1>{coin.name}</h1>
+            <img src={coin.icon} />
+            <p>{coin.price}</p>
+          </div>
+        );
+      })}
+    </div>
+  );
 };
 
 export const getStaticProps = async () => {
